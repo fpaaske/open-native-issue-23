@@ -3,6 +3,8 @@ Example repo for bug report https://github.com/OpenNative/open-native/issues/23
 
 As discussed on [Discord](https://discord.com/channels/603595811204366337/1039972742868500522/1106634064041103450) I'm having issues with react-native-app-auth.
 
+## Part 1
+
 After setting up open-native and adding react-native-app-auth, I get the following error on Android when calling authorize():
 ```
   JS: CONSOLE LOG: Error: �����
@@ -38,3 +40,20 @@ The log output when starting the app looks OK:
 [@open-native/core/hooks/before-prepare.js] Autolinked react-native-app-auth!
 [@open-native/core/hooks/before-prepare.js] ... Finished autolinking React Native ios native modules.
 ```
+
+## Part 2
+
+As mentioned [here](https://github.com/OpenNative/open-native/issues/23#issuecomment-1576391045), optional parameters are not working properly on Android.
+
+## To test/reproduce
+
+* Checkout this repo
+* Add a [.env file](https://docs.nativescript.org/webpack.html#using-env-files) with the following info:
+```text
+ISSUER = <your-config>
+CLIENT_ID = <your-config>
+REDIRECT_URL = <your-config>
+POST_LOGOUT_REDIRECT_URL = <your-config>
+SCOPES = <your-config>
+```
+* Run with `ns run android|ios` and click the authorize-button

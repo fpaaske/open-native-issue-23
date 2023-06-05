@@ -1,0 +1,7 @@
+<ActionBar title="App Auth"> </ActionBar>
+
+<StackLayout>
+  <Button (tap)="doAuthorize()">Authorize</Button>
+  <Button (tap)="doLogout()">Logout</Button>
+  <Label *ngIf="authorized">Authorized</Label>
+</StackLayout>

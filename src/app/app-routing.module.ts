@@ -1,14 +1,12 @@
-import { NgModule } from '@angular/core'
-import { Routes } from '@angular/router'
-import { NativeScriptRouterModule } from '@nativescript/angular'
+import {NgModule} from '@angular/core'
+import {Routes} from '@angular/router'
+import {NativeScriptRouterModule} from '@nativescript/angular'
 
-import { ItemsComponent } from './item/items.component'
-import { ItemDetailComponent } from './item/item-detail.component'
+import {AppAuthComponent} from '~/app/app-auth/app-auth.component'
 
 const routes: Routes = [
-  { path: '', redirectTo: '/items', pathMatch: 'full' },
-  { path: 'items', component: ItemsComponent },
-  { path: 'item/:id', component: ItemDetailComponent },
+  { path: '', redirectTo: '/app-auth', pathMatch: 'full' },
+  { path: 'app-auth', component: AppAuthComponent },
 ]
 
 @NgModule({
