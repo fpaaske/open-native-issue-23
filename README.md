@@ -50,10 +50,10 @@ As mentioned [here](https://github.com/OpenNative/open-native/issues/23#issuecom
 * Checkout this repo
 * Add a [.env file](https://docs.nativescript.org/webpack.html#using-env-files) with the following info:
 ```text
-ISSUER = <your-config>
-CLIENT_ID = <your-config>
-REDIRECT_URL = <your-config>
-POST_LOGOUT_REDIRECT_URL = <your-config>
-SCOPES = <your-config>
+ISSUER = https://demo.duendesoftware.com/
+CLIENT_ID = interactive.public
+REDIRECT_URL = com.test.auth://login
+POST_LOGOUT_REDIRECT_URL = com.test.auth://logout
+SCOPES = openid,profile,email,api,offline_access
 ```
 * Run with `ns run android|ios` and click the authorize-button
