@@ -55,5 +55,10 @@ CLIENT_ID = interactive.public
 REDIRECT_URL = com.test.auth://login
 POST_LOGOUT_REDIRECT_URL = com.test.auth://logout
 SCOPES = openid,profile,email,api,offline_access
+# to test service configuration
+AUTHORIZE_ENDPOINT = https://demo.duendesoftware.com/connect/authorize
+ENDSESSION_ENDPOINT = https://demo.duendesoftware.com/connect/endsession
+TOKEN_ENDPOINT = https://demo.duendesoftware.com/connect/token
+REVOCATION_ENDPOINT = https://demo.duendesoftware.com/connect/revocation
 ```
 * Run with `ns run android|ios` and click the authorize-button

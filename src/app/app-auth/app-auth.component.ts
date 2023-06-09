@@ -19,11 +19,27 @@ export class AppAuthComponent {
   }
 
   doAuthorize() {
+    console.log('doAuthorize..');
+
     authorize({
       clientId: this.clientId,
       issuer: this.issuer,
       redirectUrl: this.redirectUrl,
       scopes: this.scopes,
+      // additionalHeaders: {'a': 'b'},
+      // additionalParameters: {prompt: 'login'},
+      // clientAuthMethod: 'basic',
+      // clientSecret: '',
+      // connectionTimeoutSeconds: 30,
+      // customHeaders: {register: {'custom1': 'test1'}},
+      // dangerouslyAllowInsecureHttpRequests: false,
+      // serviceConfiguration: {
+      //   authorizationEndpoint: process.env.AUTHORIZE_ENDPOINT,
+      //   endSessionEndpoint: process.env.ENDSESSION_ENDPOINT,
+      //   tokenEndpoint: process.env.TOKEN_ENDPOINT,
+      //   revocationEndpoint: process.env.REVOCATION_ENDPOINT
+      // },
+      // skipCodeExchange: false,
       useNonce: true,
       usePKCE: true,
       warmAndPrefetchChrome: false
